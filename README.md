@@ -1,35 +1,67 @@
-## 1 Introduction
-In this assignment you need to pick one or two datasets from one of those available at the UCI Repository1 and perform supervised learning tasks (classi- fication or regression) on them.
-The report task is mandatory and counts a total of 20 marks. The remaining marks are equally split across 5 learning tasks. For each learning task you need to pick a learning algorithm from a family of algorithms: decision trees, instance- based learning, bayesian learning, neural networks, and model ensembles.
-Note that, the learning algorithms that you can pick do not need to be among those presented in the module. You can pick any that you like, and; whenever possible you should use as a target feature the one identified by the dataset. If this is not possible you can use another feature from those available in the dataset.
+# **Classification of Bank Account Risk -- Credit Default Prediction** 
 
-## 2 Instructions
-To complete this assignment, you need to use Python and Jupyter notebooks. You should submit one Jupyter notebook for each task. Common preprocessing steps for the dataset and final performance analysis can be done in other Jupyter notebooks. You will be using Jupyter notebooks because these will allow you to code, document your code, and present results all at the same time. Please make sure to document your code and describe it also in the report.   
+## 1. Introduction
 
-### 2.1 Report(20)
-You will be supplied with a report template containing further instructions and indications of what to write. These indications are highlighted in orange. Please follow them carefully and delete them when you are done. You must use this template and its format should not be changed.    
+This project focuses on the binary classification of predicting whether a credit card client would default.
 
-The report will be evaluated based on its general quality, task description, data analysis, and final comparison of the trained models on the test sets. If you wish, you can add an image in the cover page. This template should not be used only to get a full mark on the this task, but also to make sure you get a full mark on the other tasks by presenting what you have done in a clear and satisfactory manner. The report has no word limit, but be reasonable.
+Specifically, we used 5 kinds of machine learning algorithms to train the model, which is based on attributes such as payment history, amount of credit, and demographic information.
 
-### 2.2 Learning Tasks(5*16)
+![](images/%E5%9B%BE%E7%89%87-02.png){width="616"}
 
-Each task will be evaluate based on the quality of its presentation, implemen-
-tation, training, validation, and hyper-parameter tuning.
-Note that you will not be evaluated based on the performance of the trained models; this assignment aims to evaluate your work and not the learning algo- rithms. The performance of these learned models is left to you to discuss in the report.
+## **2. Learning Tasks**
 
-* Decision Trees 
-* Instance-based Learning 
-* Neural Networks 
-* Bayesian Learning 
-* Model Ensembles
+### 1. Dataset, input and expected output
 
-## 3 Submission
-This assignment should be submitted as follows:
-1. using the provided GitHub repository in GitHub Classroom;
-2. a zip file containing the project solution to the Assessment tab of the module Moodle page;
-3. a pdf file of the project report to the Assessment tab of the module Moodle page.
+1) The dataset includes the 23 features and target.
 
-Failing to carefully follow these instructions may result in penalties.
+2) The input features are numerical features, categorical features and ordinal features
 
+3) The expected outputs are the correct class label based on the given input features.
 
-The group repository will be available to you after following the instruc- tions you find at the following weblink: https://classroom.github.com/a/ Ie_Fhv1m. If you are the first member of your team to click on this link, please use the name of your team when requested.
+### 2. Data processing and split
+
+The raw dataset was split into the training (70%), validation (15%) and testing (15%) parts.
+
+### 3. Machine learning model training
+
+1) Decision Trees: Classification And Regression Trees (CART)
+
+2) Instance-based Learning: K-Nearest Neighbor (KNN)
+
+3) Bayesian: Naive Bayes
+
+4) Neural Network: Multi-Layer Perceptron (MLP)
+
+5) Model Ensemble: Stackink Bagging&Voting
+
+### 4. Model evaluation methodology
+
+-   Confusion matrix
+
+-    Accuracy (ACC)
+
+-   Precision
+
+-   Recall
+
+-   F1-score
+
+-   Matthews Correlation Coefficient (MCC)
+
+## 3. Conclusion
+
+Based on the evaluation metrics and the context of credit default prediction, CART is seen as the best performing model. It not only achieves the highest accuracy but also maintains a good balance between the precision and the recall, which is crucial for making informed credit decisions and managing risk effectively.
+
+## 4. Contributors
+
+-   Dodo Wang
+
+-   Jishuo Zhang
+
+-   Haijin Li
+
+-   Yiru Xu
+
+-   Zonghe Ma
+
+***Further detailed information can be found in the PDF file Credit Default Prediction Report***
